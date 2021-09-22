@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.LocationFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/parentImageContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:src="@drawable/cafe"
+            android:scaleType="centerCrop">
+        </ImageView>
+
+    </RelativeLayout>
+
+<RelativeLayout
+    android:id="@+id/parentLayoutContainer"
+    android:layout_below="@id/parentImageContainer"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@drawable/custom_layout">
+
+    <TextView
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order Food Oline"
+        android:fontFamily="@font/mavenpro_medium"
+        android:textColor="@color/white">
+    </TextView>
+
+</RelativeLayout>
+
+<RelativeLayout
+    android:id="@+id/parentShareContainer"
+    android:layout_below="@id/parentLayoutContainer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/bottomContainer"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/layoutParentFirst"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageViewFirst"
+            android:layout_gravity="center"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_share"/>
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/myTextViewFirst"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mavenpro_medium"
+            android:textColor="@color/Black"
+            android:text="Share">
+        </TextView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginBottom="6dp"
+        android:id="@+id/layoutParentSecond"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageViewSecond"
+            android:layout_gravity="center"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_review"/>
+
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/myTextViewSecond"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mavenpro_medium"
+            android:textColor="@color/Black"
+            android:text="Photo">
+        </TextView>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layoutParentThird"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/imageViewThird"
+            android:layout_gravity="center"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_camera"/>
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/myTextViewThird"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mavenpro_medium"
+            android:textColor="@color/Black"
+            android:text="Review">
+        </TextView>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/parentMapContainer"
+        android:layout_below="@id/parentShareContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/mapimage"
+            android:scaleType="centerCrop">
+
+        </ImageView>
+
+        <ImageView
+            android:layout_centerInParent="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_pincolored">
+        </ImageView>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123 Queen Street,Pakistan"
+                android:fontFamily="@font/mavenpro_regular"
+                android:textColor="@color/white">
+            </TextView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pakistani,Cafe"
+                android:fontFamily="@font/mavenpro_regular"
+                android:textColor="@color/white">
+            </TextView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10 AM To 12AM"
+                android:fontFamily="@font/mavenpro_regular"
+                android:textColor="@color/white">
+            </TextView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/parentNumberContainer"
+        android:layout_below="@id/parentMapContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mavenpro_medium"
+                android:text="Call">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mavenpro_medium"
+                android:text="Address">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mavenpro_medium"
+                android:text="Average Cost">
+
+            </TextView>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_gravity="right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mavenpro_medium"
+                android:textColor="@color/colorPrimary"
+                android:text="+92 333 444">
+
+            </TextView>
+
+            <TextView
+                android:layout_gravity="right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mavenpro_medium"
+                android:textColor="@color/colorPrimary"
+                android:text="Joher Town">
+
+            </TextView>
+
+            <TextView
+                android:layout_gravity="right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mavenpro_medium"
+                android:textColor="@color/colorPrimary"
+                android:text="20$-30$">
+
+            </TextView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+      <RelativeLayout
+          android:id="@+id/parentPhotosRvContainer"
+          android:layout_marginTop="10dp"
+          android:layout_below="@id/parentNumberContainer"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content">
+
+          <TextView
+              android:layout_marginLeft="10dp"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:fontFamily="@font/mavenpro_bold"
+              android:textColor="@color/Black"
+              android:text="Photos">
+
+          </TextView>
+
+          <TextView
+              android:layout_marginRight="10dp"
+              android:layout_alignParentRight="true"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:fontFamily="@font/mavenpro_medium"
+              android:textColor="@color/colorPrimary"
+              android:text="+ Add">
+
+          </TextView>
+
+      </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/parentFirstRecyclerViewContainer"
+        android:layout_below="@id/parentPhotosRvContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewLocationFirst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/parentTextReviewsContainer"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/parentFirstRecyclerViewContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mavenpro_bold"
+                android:textColor="@color/Black"
+                android:text="Reviews">
+
+            </TextView>
+
+        </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_below="@id/parentTextReviewsContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewLocationSecond"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>
